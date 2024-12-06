@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header"></header>
+    <main class="main">
+      <form action="#">
+        <div class="name">
+          <label for="name">Cardholder Name</label>
+          <input type="text" name="name" id="name">
+        </div>
+
+        <div class="card-number">
+          <label for="card-number">Card Number</label>
+          <input type="number" name="card-number" id="card-number">
+        </div>
+
+        <div class="details">
+          <div class="expiry-date">
+            <label for="expiry-date">EXP. DATE (MM/YY)</label>
+            <input type="text" id="expiry-date">
+            <input type="text">
+          </div>
+
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc">
+          </div>
+
+          <button type="submit">Confirm</button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <div class="card-back">
+  </div>
+  <div class="card-front"></div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.github.com/fayiz770">Mohammad Waris Fayiz</a>.
+  </div>
+</body>
+</html>
