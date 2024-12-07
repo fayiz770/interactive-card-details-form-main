@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --deep-violet: #21092F;
+    --purplish-grey: #8F8694;
+    --light-grey: #DFDEE0;
+    --white: #FFFFFF;
+    --red: #FF5050;
+    --gradient: linear-gradient(#6348FE, #610595);
+    --space-grotesk: 'Space Grotesk', sans-serif;
+}
+
+body {
+    font-family: var(--space-grotesk);
+}
+
+
+.header {
+    background: url(images/bg-main-mobile.png) no-repeat center center / cover;
+    height: 30vh;
+}
+
+
+.main {
+    padding: 10em 2em 2em 2em;
+    width: 300px;
+}
+
+form {
+    display: grid;
+    gap: 1em;
+}
+
+form > div {
+    display: grid;
+    gap: .5em;
+}
+
+input {
+    color: var(--purplish-grey);
+    font-family: var(--space-grotesk);
+    padding: 1em;
+    border: 1px solid var(--purplish-grey);
+    border-radius: .5em;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expiry-date {
+    display: flex;
+    gap: .5em;
+}
+
+.expiry-date > div {
+    display: grid;
+    gap: .5em;
+}
+
+.cvc {
+    display: grid;
+    gap: .5em;
+}
+
+.month,
+.year {
+    width: 80px;
+}
+
+button {
+    color: var(--white);
+    font-weight: bold;
+    background: var(--deep-violet);
+    border: none;
+    border-radius: .5em;
+    padding: 1em;
+}

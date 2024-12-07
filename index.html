@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Interactive card details form</title>
 
@@ -21,28 +23,32 @@
       <form action="#">
         <div class="name">
           <label for="name">Cardholder Name</label>
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" placeholder="e.g. Jane Applessed">
         </div>
 
         <div class="card-number">
           <label for="card-number">Card Number</label>
-          <input type="number" name="card-number" id="card-number">
+          <input type="number" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
         </div>
 
         <div class="details">
           <div class="expiry-date">
-            <label for="expiry-date">EXP. DATE (MM/YY)</label>
-            <input type="text" id="expiry-date">
-            <input type="text">
+            <div>
+              <label for="expiry-date">EXP. DATE </label>
+              <input type="text" id="expiry-date" class="month" placeholder="MM">
+            </div>
+            <div>
+              <label for="expiry-date">(MM/YY)</label>
+              <input type="text" class="year" placeholder="YY">
+            </div>
           </div>
 
           <div class="cvc">
             <label for="cvc">CVC</label>
-            <input type="text" id="cvc">
+            <input type="text" id="cvc" placeholder="CVC">
           </div>
-
-          <button type="submit">Confirm</button>
         </div>
+        <button type="submit">Confirm</button>
       </form>
     </main>
   </div>
