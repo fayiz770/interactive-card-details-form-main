@@ -1,84 +1,238 @@
+/* Reset default styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --deep-violet: #21092F;
-    --purplish-grey: #8F8694;
-    --light-grey: #DFDEE0;
-    --white: #FFFFFF;
-    --red: #FF5050;
-    --gradient: linear-gradient(#6348FE, #610595);
-    --space-grotesk: 'Space Grotesk', sans-serif;
-}
-
-body {
+  }
+  
+  /* CSS Custom Properties (Variables) */
+  :root {
+    --deep-violet: #21092f;
+    --purplish-grey: #8f8694;
+    --light-grey: #dfdee0;
+    --white: #ffffff;
+    --red: #ff5050;
+    --gradient: linear-gradient(#6348fe, #610595);
+    --space-grotesk: "Space Grotesk", sans-serif;
+  }
+  
+  /* Base styles */
+  body {
+    min-height: 100vh;
     font-family: var(--space-grotesk);
-}
-
-
-.header {
-    background: url(images/bg-main-mobile.png) no-repeat center center / cover;
-    height: 30vh;
-}
-
-
-.main {
-    padding: 10em 2em 2em 2em;
-    width: 300px;
-}
-
-form {
+  }
+  
+  /* Card Background Images */
+  .card-front,
+  .card-back {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .card-front {
+    background-image: url("./images/bg-card-front.png");
+  }
+  
+  .card-back {
+    background-image: url("./images/bg-card-back.png");
+  }
+  
+  /* Form Layout Styles */
+  form {
     display: grid;
     gap: 1em;
-}
-
-form > div {
+  }
+  
+  form > div {
     display: grid;
-    gap: .5em;
-}
-
-input {
+    gap: 0.5em;
+  }
+  
+  /* Input Styles */
+  input {
     color: var(--purplish-grey);
     font-family: var(--space-grotesk);
     padding: 1em;
     border: 1px solid var(--purplish-grey);
-    border-radius: .5em;
-}
-
-.details {
+    border-radius: 0.5em;
+  }
+  
+  /* Card Details Section Layout */
+  .details {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.expiry-date {
+  }
+  
+  /* Expiry Date Input Group */
+  .expiry-date {
     display: flex;
-    gap: .5em;
-}
-
-.expiry-date > div {
+    gap: 0.5em;
+  }
+  
+  .expiry-date > div {
     display: grid;
-    gap: .5em;
-}
-
-.cvc {
+    gap: 0.5em;
+  }
+  
+  /* CVC Input Group */
+  .cvc {
     display: grid;
-    gap: .5em;
-}
-
-.month,
-.year {
+    gap: 0.5em;
+  }
+  
+  /* Month/Year Input Widths */
+  .month,
+  .year {
     width: 80px;
-}
-
-button {
+  }
+  
+  /* Submit Button Styles */
+  button {
     color: var(--white);
     font-weight: bold;
     background: var(--deep-violet);
     border: none;
-    border-radius: .5em;
+    border-radius: 0.5em;
     padding: 1em;
-}
+  }
+  
+  /* Main Layout Container */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+  
+  /* Cards Section Styles */
+  .cards-section {
+    width: 40%;
+    min-height: 100vh;
+    padding-left: 15%;
+    background-image: url("./images/bg-main-desktop.png");
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Front Card Styles and Layout */
+  .card-front {
+    position: absolute;
+    top: 20%;
+    width: 380px;
+    height: 200px;
+    color: var(--white);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Card Logo Size */
+  .card-logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* Card Number Display */
+  .card-number-display {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 40px 0;
+  }
+  
+  /* Card Details Layout */
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  /* Back Card Styles and Position */
+  .card-back {
+    position: absolute;
+    top: 55%;
+    right: -45%;
+    width: 380px;
+    height: 200px;
+  }
+  
+  /* CVC Display on Back Card */
+  .card-cvc {
+    position: absolute;
+    right: 40px;
+    top: 45%;
+    color: var(--white);
+    font-size: 14px;
+  }
+  
+  /* Form Section Layout */
+  .form-section {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media screen and (max-width: 1024px) {
+    /* Mobile Container Layout */
+    .container {
+      flex-direction: column;
+      gap: 10px
+    }
+  
+    /* Mobile Cards Section */
+    .cards-section {
+      width: 100%;
+      min-height: 240px;
+      background-image: url("./images/bg-main-mobile.png");
+    }
+  
+    /* Mobile Front Card Position */
+    .card-front {
+      top: 126px;
+      left: 40%;
+      transform: translateX(-50%);
+      right: auto;
+      width: 285px;
+      height: 156px;
+      z-index: 2;
+    }
+  
+    /* Mobile Card Logo Size */
+    .card-logo {
+      width: 54px;
+    }
+  
+    /* Mobile Card Number Size */
+    .card-number-display {
+      font-size: 14px;
+      margin: 20px 0;
+    }
+  
+    /* Mobile Card Details Size */
+    .card-details {
+      font-size: 10px;
+    }
+  
+    /* Mobile Back Card Position */
+    .card-back {
+      top: 32px;
+      left: 60%;
+      transform: translateX(-50%);
+      right: auto;
+      width: 285px;
+      height: 156px;
+    }
+  
+    /* Mobile Form Section Layout */
+    .form-section {
+      width: 100%;
+      padding: 91px 24px;
+    }
+  }
+  
