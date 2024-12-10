@@ -177,6 +177,21 @@
     padding: 0 100px;
   }
   
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+  }
+
+  .warning {
+    display: none;
+    color: red;
+  }
   /* Mobile Responsive Styles */
   @media screen and (max-width: 1024px) {
     /* Mobile Container Layout */

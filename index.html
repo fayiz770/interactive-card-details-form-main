@@ -18,22 +18,10 @@
 </head>
 <body>
   <div class="container">
-    <div class="cards-section">
-      <div class="card-front">
-        <img src="./images/card-logo.svg" alt="card logo" class="card-logo">
-        <div class="card-number-display">0000 0000 0000 0000</div>
-        <div class="card-details">
-          <span class="card-name">JANE APPLESEED</span>
-          <span class="card-date">00/00</span>
-        </div>
-      </div>
-      <div class="card-back">
-        <span class="card-cvc">000</span>
-      </div>
-    </div>
+    <div class="cards-section" id="cards-section"></div>
     
     <div class="form-section">
-      <form action="#">
+      <form action="#" autocomplete="off">
         <div class="name">
           <label for="name">Cardholder Name</label>
           <input 
@@ -41,7 +29,10 @@
             name="name" 
             id="name" 
             placeholder="e.g. Jane Applessed"
+            data-card-name="card-name"
+            autocomplete="off"
             >
+          <span class="name-warning warning" id="name-warning">Name must be valid!</span>
         </div>
 
         <div class="card-number">
@@ -51,24 +42,50 @@
             name="card-number" 
             id="card-number" 
             placeholder="e.g. 1234 5678 9123 0000"
+            data-number="number"
+            autocomplete="off"
             >
+          <span class="card-number-warning warning" id="card-number-warning">Card number must be valid!</span>
         </div>
 
         <div class="details">
           <div class="expiry-date">
             <div>
               <label for="expiry-date">EXP. DATE </label>
-              <input type="text" id="expiry-date" class="month" placeholder="MM">
+              <input 
+                type="number" 
+                id="expiry-date month" 
+                class="month" 
+                placeholder="MM" 
+                autocomplete="cc-exp-month"
+                data-month="month"
+                >
+                <span class="month-warning warning" id="month-warning">Month must be valid!</span>
             </div>
             <div>
               <label for="expiry-date">(MM/YY)</label>
-              <input type="text" class="year" placeholder="YY">
+              <input 
+                type="number" 
+                class="year" 
+                id="year"
+                placeholder="YY" 
+                autocomplete="cc-exp-year"
+                data-year="year"
+                >
+                <span class="year-warning warning" id="year-warning">Year must be valid!</span>
             </div>
           </div>
 
           <div class="cvc">
             <label for="cvc">CVC</label>
-            <input type="text" id="cvc" placeholder="CVC">
+            <input 
+              type="number" 
+              id="cvc" 
+              placeholder="CVC" 
+              autocomplete="cc-csc"
+              data-cvc="cvc"
+              >
+              <span class="cvc-warning warning" id="cvc-warning">CVC must be valid!</span>
           </div>
         </div>
         <button type="submit">Confirm</button>
@@ -79,5 +96,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.github.com/fayiz770">Mohammad Waris Fayiz</a>.
   </div>
+  <script src="index.js"></script>
+  <script src="validate.js"></script>
 </body>
 </html>
